@@ -78,7 +78,7 @@ class Game {
 
   play() {
     this.handleElements();
-
+    this.handleResetButton();
     Player.getPlayersInfo();
 
     if (allPlayers !== undefined) {
@@ -118,7 +118,7 @@ class Game {
         player.positionY += 10;
         player.update();
       }
-
+      this.handlePlayerControls();
       drawSprites();
     }
   }
